@@ -55,7 +55,7 @@ x1 = np.linspace(lam2, lam3, 100)
 
 ax3[0].plot(x1, sct.expon.pdf(x1), 'r-', lw=5, alpha=0.6)
 ax3[0].set_ylabel('Вероятность поломки')
-ax3[0].set_title('Вероятность поломки')
+#ax3[0].set_title('Вероятность поломки')
 ax3[1].plot(x1, sct.expon.cdf(x1), 'r-', lw=5, alpha=0.6)
 #dens_exp = st.expon(lam2).pdf(x1)
 #cumul_exp = st.expon(lam2).cdf(x1)
