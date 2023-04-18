@@ -20,8 +20,8 @@ pdf1 = normal_dist(x,mean1,sd1)
 
 fig1, ax1 = plt.subplots()
 plt.plot(x, pdf1 , color = 'blue')
-plt.xlabel('Data points')
-plt.ylabel('Probability Density')
+plt.xlabel('Величина')
+plt.ylabel('Частота')
 st.pyplot(fig1)
 
 st.write("""
