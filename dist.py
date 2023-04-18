@@ -22,7 +22,7 @@ st.pyplot(fig1)
 
 #x = np.linspace(-10,10,100)
 k = np.arange(st.slider(label='input k', min_value=5, max_value=100, value=10))
-lam = st.slider(label='input lam', min_value=0, max_value=5, value=1)
+lam = st.slider(label='input lam', min_value=0, max_value=15, value=1)
 mass_poi = sct.poisson(lam).pmf(k)
 cumul_poi = sct.poisson(lam).cdf(k)
 fig2, ax2 = plt.subplots()
