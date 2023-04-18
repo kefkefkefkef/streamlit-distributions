@@ -52,9 +52,9 @@ lam2 = st.slider(label='Введите начало', min_value=0, max_value=3, 
 lam3 = st.slider(label='Введите конец', min_value=2, max_value=5, value=3)
 x1 = np.linspace(lam2, lam3, 100)
 
-ax3[0].plot(x1, sct.expon.pdf(x1), 'r-', lw=5, alpha=0.4)
+ax3[0].plot(x1, sct.expon.pdf(x1), 'r-', lw=5, alpha=0.6)
 plt.xlabel('Data points')
-ax3[1].plot(x1, sct.expon.cdf(x1), 'r-', lw=5, alpha=0.4)
+ax3[1].plot(x1, sct.expon.cdf(x1), 'r-', lw=5, alpha=0.6)
 #dens_exp = st.expon(lam2).pdf(x1)
 #cumul_exp = st.expon(lam2).cdf(x1)
 plt.xlabel('Data points')
