@@ -41,12 +41,11 @@ plt.xlabel('Количество людей')
 plt.ylabel('Вероятность')
 st.pyplot(fig2)
 
-def plot_dens_cumul(density, cumul, label, x, ls=None):
-    _, ax = plt.subplots(1, 2, figsize=(12, 4))
-    ax[0].plot(x, density, label=f'Density of {label}', linestyle=ls)
-    ax[0].legend()
-    ax[1].plot(x, cumul, label=f'Cumululative {label}')
-    ax[1].legend()
+st.write("""
+
+### Экспоненциальное распределение
+""")
+
 
 fig3, ax3 = plt.subplots(2, 1)
 lam2 = st.slider(label='Введите начало', min_value=0, max_value=3, value=1)
