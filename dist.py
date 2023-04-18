@@ -48,14 +48,16 @@ def plot_dens_cumul(density, cumul, label, x, ls=None):
     ax[1].plot(x, cumul, label=f'Cumululative {label}')
     ax[1].legend()
 
-
-lam2 = st.slider(label='Введите среднее значение', min_value=0, max_value=3, value=1)
-x1 = np.linspace(lam2, 3, 100)
-
-dens_exp = st.expon(lam2).pdf(x1)
-cumul_exp = st.expon(lam2).cdf(x1)
 fig3, ax3 = plt.subplots()
-plot_dens_cumul(dens_exp, cumul_exp, 'expon', x1)  
+lam2 = st.slider(label='Введите начало', min_value=0, max_value=3, value=1)
+lam3 = st.slider(label='Введите конец', min_value=2, max_value=5, value=3)
+x1 = np.linspace(lam2, lam3, 100)
+
+ax3.plot(x1, sct.expon.pdf(x1), 'r-', lw=5, alpha=0.6)
+#dens_exp = st.expon(lam2).pdf(x1)
+#cumul_exp = st.expon(lam2).cdf(x1)
+
+#plot_dens_cumul(dens_exp, cumul_exp, 'expon', x1)  
 
 
 
