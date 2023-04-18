@@ -8,7 +8,7 @@ def normal_dist(x , mean , sd):
     prob_density = np.exp(-0.5*((x-mean)/sd)**2) / np.sqrt(np.pi * sd**2)
     return prob_density
  
-mean = st.slider(label='input mean', min_value=-5, max_value=5, value=4.)
+mean = st.slider(label='input mean', min_value=-5., max_value=5., value=4.)
 sd = st.slider(label='input std dev', min_value=0.1, max_value=5., value=4.)
  
 pdf = normal_dist(x,mean,sd)
