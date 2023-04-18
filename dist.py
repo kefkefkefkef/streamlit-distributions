@@ -49,7 +49,7 @@ def plot_dens_cumul(density, cumul, label, x, ls=None):
     ax[1].legend()
 
 
-lam2 = st.slider(label='Введите количество людей, заходящих в минуту', min_value=0, max_value=15, value=1)
+lam2 = st.slider(label='Введите среднее значение', min_value=0, max_value=3, value=1)
 x1 = np.linspace(lam2, 3, 100)
 
 dens_exp = st.expon(lam2).pdf(x1)
