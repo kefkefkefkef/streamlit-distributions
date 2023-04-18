@@ -21,7 +21,7 @@ plt.ylabel('Probability Density')
 st.pyplot(fig1)
 
 #x = np.linspace(-10,10,100)
-k = st.slider(label='input lam', min_value=10, max_value=100, value=10)
+k = st.slider(label='input k', min_value=10, max_value=100, value=10)
 lam = st.slider(label='input lam', min_value=0, max_value=5, value=1)
 mass_poi = sct.poisson(lam).pmf(k)
 cumul_poi = sct.poisson(lam).cdf(k)
