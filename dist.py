@@ -48,7 +48,7 @@ def plot_dens_cumul(density, cumul, label, x, ls=None):
     ax[1].plot(x, cumul, label=f'Cumululative {label}')
     ax[1].legend()
 
-fig3, ax3 = plt.subplots(1, 2)
+fig3, ax3 = plt.subplots(2, 1)
 lam2 = st.slider(label='Введите начало', min_value=0, max_value=3, value=1)
 lam3 = st.slider(label='Введите конец', min_value=2, max_value=5, value=3)
 x1 = np.linspace(lam2, lam3, 100)
