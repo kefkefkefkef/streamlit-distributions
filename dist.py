@@ -55,7 +55,7 @@ x1 = np.linspace(lam2, 3, 100)
 dens_exp = st.expon(lam2).pdf(x1)
 cumul_exp = st.expon(lam2).cdf(x1)
 fig3, ax3 = plt.subplots()
-plot_dens_cumul(dens_exp, cumul_exp, 'expon', x)  
+plot_dens_cumul(dens_exp, cumul_exp, 'expon', x1)  
 
 
 
