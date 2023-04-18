@@ -8,7 +8,11 @@ x = np.linspace(-10,10,100)
 def normal_dist(x , mean , sd):
     prob_density = np.exp(-0.5*((x-mean)/sd)**2) / np.sqrt(np.pi * sd**2)
     return prob_density
- 
+st.write("""
+
+### Нормальное распределение
+""")
+
 mean1 = st.slider(label='input mean', min_value=-5., max_value=5., value=4.)
 sd1 = st.slider(label='input std dev', min_value=0.1, max_value=5., value=4.)
  
@@ -19,6 +23,11 @@ plt.plot(x, pdf1 , color = 'blue')
 plt.xlabel('Data points')
 plt.ylabel('Probability Density')
 st.pyplot(fig1)
+
+st.write("""
+
+### Распределение Пуассона 
+""")
 
 #x = np.linspace(-10,10,100)
 k = np.arange(st.slider(label='Промасштабируйте ось Х', min_value=5, max_value=100, value=10))
