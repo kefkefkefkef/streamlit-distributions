@@ -40,26 +40,26 @@ plt.title('Количество людей заходящих в магазин 
 plt.xlabel('Количество людей')
 plt.ylabel('Вероятность')
 st.pyplot(fig2)
-#mean2 = st.slider(label='input mean', min_value=-5., max_value=5., value=4.)
-#sd2 = st.slider(label='input std dev', min_value=0.1, max_value=5., value=4.)
- 
-#pdf2 = normal_dist(x,mean2,sd2)
+
+def plot_dens_cumul(density, cumul, label, x, ls=None):
+    _, ax = plt.subplots(1, 2, figsize=(12, 4))
+    ax[0].plot(x, density, label=f'Density of {label}', linestyle=ls)
+    ax[0].legend()
+    ax[1].plot(x, cumul, label=f'Cumululative {label}')
+    ax[1].legend()
 
 
-#plt.plot(x, pdf2, color = 'blue')
+lam2 = st.slider(label='Введите количество людей, заходящих в минуту', min_value=0, max_value=15, value=1)
+x1 = np.linspace(lam2, 3, 100)
+
+dens_exp = st.expon(lam2).pdf(x1)
+cumul_exp = st.expon(lam2).cdf(x1)
+fig3, ax3 = plt.subplots()
+plot_dens_cumul(dens_exp, cumul_exp, 'expon', x)  
+
+
+
+#plt.plot(x, pdf3, color = 'blue')
 #plt.xlabel('Data points')
 #plt.ylabel('Probability Density')
-
-
-#x = np.linspace(-10,10,100)
-  
-mean3 = st.slider(label='input mean', min_value=-5., max_value=5., value=4.)
-sd3 = st.slider(label='input std dev', min_value=0.1, max_value=5., value=4.)
- 
-pdf3 = normal_dist(x,mean3,sd3)
-
-fig3, ax3 = plt.subplots()
-plt.plot(x, pdf3, color = 'blue')
-plt.xlabel('Data points')
-plt.ylabel('Probability Density')
 st.pyplot(fig3)
