@@ -13,8 +13,8 @@ st.write("""
 ### Нормальное распределение
 """)
 
-mean1 = st.slider(label='input mean', min_value=-5., max_value=5., value=4.)
-sd1 = st.slider(label='input std dev', min_value=0.1, max_value=5., value=4.)
+mean1 = st.slider(label='Введите среднее значение', min_value=-5., max_value=5., value=4.)
+sd1 = st.slider(label='Введите стандартное отклонение', min_value=0.1, max_value=5., value=4.)
  
 pdf1 = normal_dist(x,mean1,sd1)
 
